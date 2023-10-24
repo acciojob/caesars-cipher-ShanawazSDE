@@ -35,11 +35,13 @@ function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
 		let arr = encodedStr.split("");
+	let ans = "";
 	arr.forEach((char) => {
 	  if(char in lookup){
-	    decodedArr.push(lookup[char]);
-	  }else decodedArr.push(char);
+	    ans += lookup[char];
+	  }else ans += char;
 	})
+	decodedArr.push(ans);
   return decodedArr; //return decodedArr
 }
 
